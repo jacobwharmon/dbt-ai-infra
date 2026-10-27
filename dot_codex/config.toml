@@ -1,0 +1,12 @@
+[mcp_servers.dbt]
+command = "uvx"
+args = ["dbt-mcp@2.9.0"]
+startup_timeout_sec = 90
+
+[mcp_servers.dbt.env]
+DBT_PROJECT_DIR = "<absolute path to the folder with dbt_project.yml>"
+DBT_PATH = "<absolute path to the dbt executable>"
+DISABLE_TOOLS = "build,run,test,show,clone"
+DISABLE_SQL = "true"
+DISABLE_SEMANTIC_LAYER = "true"
+DISABLE_ADMIN_API = "true"

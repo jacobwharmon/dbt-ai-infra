@@ -1,0 +1,11 @@
+# Project settings read by scripts/agent_check.py. Agents read this too.
+
+dbt = ["uv", "run", "dbt"]    # command used to call dbt, as an argument list
+project_dir = "."             # folder containing dbt_project.yml, relative to the repo root
+targets = []                  # profile targets to parse, primary first; [] = profile default
+compile = false               # also compile the primary target (opens a warehouse connection)
+
+# Models under any folder with one of these names must carry a full contract.
+contract_layers = ["marts"]
+# Only models under folders with these names may call source().
+source_layers = ["staging"]

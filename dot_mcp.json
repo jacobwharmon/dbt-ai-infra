@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "dbt": {
+      "command": "uvx",
+      "args": ["dbt-mcp@2.9.0"],
+      "env": {
+        "DBT_PROJECT_DIR": "${DBT_PROJECT_DIR}",
+        "DBT_PATH": "${DBT_PATH}",
+        "DISABLE_TOOLS": "build,run,test,show,clone",
+        "DISABLE_SQL": "true",
+        "DISABLE_SEMANTIC_LAYER": "true",
+        "DISABLE_ADMIN_API": "true"
+      }
+    }
+  }
+}
